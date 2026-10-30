@@ -1,0 +1,36 @@
+{
+    "version": "1.7.1",
+    "description": "Linter for Nushell scripts that suggests improvements and automatic fixes.",
+    "homepage": "https://codeberg.org/wvhulle/nu-lint",
+    "license": "MIT",
+    "notes": "The Windows binary is built and distributed by ChristianLemer, not by the upstream author: https://github.com/ChristianLemer/nu-lint-releases",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/ChristianLemer/nu-lint-releases/releases/download/v1.7.1/nu-lint-x86_64-pc-windows-msvc.tar.gz",
+                "https://github.com/ChristianLemer/nu-lint-releases/releases/download/v1.7.1/LICENSE"
+            ],
+            "hash": [
+                "ebe20c15c07ccdca23839b004eead6409f9bcb5b3010cc5b10745f44733813e8",
+                "844a8534f3ea3f7088fe9bc0b6b1f36e061842b104cea6288b2a43e2be23b178"
+            ]
+        }
+    },
+    "bin": "nu-lint.exe",
+    "checkver": {
+        "github": "https://github.com/ChristianLemer/nu-lint-releases"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/ChristianLemer/nu-lint-releases/releases/download/v$version/nu-lint-x86_64-pc-windows-msvc.tar.gz",
+                    "https://github.com/ChristianLemer/nu-lint-releases/releases/download/v$version/LICENSE"
+                ],
+                "hash": {
+                    "url": "$baseurl/SHA256SUMS"
+                }
+            }
+        }
+    }
+}
